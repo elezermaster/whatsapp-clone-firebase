@@ -421,6 +421,12 @@
 }
 
 @media (max-width: 760px) {
+  .chat__message--sender {
+    background-color: #dcf8c6;
+    float: right;
+    transform: translateX(+10%);
+  }
+
   .seen {
     right: 20px;
   }
