@@ -2,7 +2,8 @@ import { useCollection } from 'react-firebase-hooks/firestore';
 import { db } from '../firebase'
 
 export default function useRooms() {
-    const [snapshot, loading, error] = useCollection(
+    //const [snapshot, loading, error]
+    const [snapshot] = useCollection(
         db.collection('rooms').orderBy('timestamp','desc')
       )
       const rooms = snapshot?.docs.map(doc => ({

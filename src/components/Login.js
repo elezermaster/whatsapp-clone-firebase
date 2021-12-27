@@ -1,14 +1,14 @@
 import "./Login.css";
 import {Button} from '@material-ui/core'
 import {auth,provider} from '../firebase'
-import { useAuthState } from 'react-firebase-hooks/auth';
+//import { useAuthState } from 'react-firebase-hooks/auth';
 import LogoLottie from './LogoLottie'
 import { FcGoogle } from "react-icons/fc";
 
 console.log('auth',auth)
 
 export default function Login() {
-  const [user, loading, error] = useAuthState(auth);
+  //const [user, loading, error] = useAuthState(auth);
   
   function handelGoogleLogIn(){
       auth && auth.signInWithRedirect(provider)

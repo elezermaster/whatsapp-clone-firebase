@@ -2,7 +2,7 @@ import { useCollection } from 'react-firebase-hooks/firestore';
 import { db } from '../firebase'
 
 export default function useUsers(user) {
-    const [snapshot, loading, error] = useCollection(
+    const [snapshot] = useCollection(
         db.collection('users').orderBy('timestamp','desc')
       )
 

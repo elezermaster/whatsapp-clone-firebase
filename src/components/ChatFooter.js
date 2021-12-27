@@ -7,7 +7,7 @@ import CheckCircleOutlineOutlinedIcon from '@material-ui/icons/CheckCircleOutlin
 import recordAudio from './recordAudio'
 import {db,createTimestamp,audioStorage} from '../firebase'
 import {v4} from 'uuid'
-import { Avatar, IconButton } from "@material-ui/core";
+import { IconButton } from "@material-ui/core";
 
 export default function ChatFooter({
   input,
@@ -66,7 +66,7 @@ export default function ChatFooter({
 
   const handleFinishRecording = async() => {
     const audio = await handleStopRecording()
-    const {audioFile, audioUrl, play, audioName} = await audio
+    const {audioFile, audioName} = await audio //audioUrl, play,
     sendAudio(audioFile, audioName)
   }
 
@@ -178,26 +178,26 @@ export default function ChatFooter({
 
   }
 
-  const btnIconSend = (
-    <SendOutlinedIcon
-      styel={{
-        width: 20,
-        height: 20,
-        color: 'white',
-        zIndex: 10
-      }}
-    />)
+  // const btnIconSend = (
+  //   <SendOutlinedIcon
+  //     styel={{
+  //       width: 20,
+  //       height: 20,
+  //       color: 'white',
+  //       zIndex: 10
+  //     }}
+  //   />)
 
-  const btnIconMic = (
-    <MicNoneOutlinedIcon
-        styel={{
-          width: 24,
-          height: 24,
-          color: 'white',
-          zIndex: 10
-        }}        
-      />
-      )
+  // const btnIconMic = (
+  //   <MicNoneOutlinedIcon
+  //       styel={{
+  //         width: 24,
+  //         height: 24,
+  //         color: 'white',
+  //         zIndex: 10
+  //       }}        
+  //     />
+  //     )
     
   
   // (
@@ -222,14 +222,14 @@ export default function ChatFooter({
   const canRecord = navigator.mediaDevices.getUserMedia && 
                     window.MediaRecorder
 
-  const handleButtonClick = () => {
-    setWritingText(false)
-    if(input?.trim() || (input === "" && image)){
-      return sendMessage
-    } else{
-      return handleStartRecording
-    }
-  }
+  // const handleButtonClick = () => {
+  //   setWritingText(false)
+  //   if(input?.trim() || (input === "" && image)){
+  //     return sendMessage
+  //   } else{
+  //     return handleStartRecording
+  //   }
+  // }
 
   return (
     <div className="chat__footer">

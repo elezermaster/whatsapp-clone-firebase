@@ -3,7 +3,7 @@ import { db } from '../firebase'
 
 export default function useChats(user) {
     // /users/user.id/chats
-    const [snapshot, loading, error] = useCollection(
+    const [snapshot] = useCollection(
         user ? db.collection('users')
         .doc(user.uid)
         .collection('chats')

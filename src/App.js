@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 import useWindowSize from "./hooks/useWindowSize";
 import Login from './components/Login'
-import {auth} from './firebase'
-import { useAuthState } from 'react-firebase-hooks/auth';
+//import {auth} from './firebase'
+//import { useAuthState } from 'react-firebase-hooks/auth';
 import useAuthUser from './hooks/useAuthUser'
 import Sidebar from './components/Sidebar'
 import {Route,Redirect} from 'react-router-dom'

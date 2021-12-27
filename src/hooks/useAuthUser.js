@@ -1,10 +1,10 @@
-import React, {useEffect} from 'react'
+import {useEffect} from 'react'
 
 import {auth, db, createTimestamp} from '../firebase'
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 export default function useAuthUser() {
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
 
     useEffect(() => {
         if(user){

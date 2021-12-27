@@ -1,9 +1,9 @@
-import React,{ useState,useRef,useEffect} from "react";
+import React,{useRef,useEffect} from "react";
 import { CircularProgress } from "@material-ui/core"
 import AudioPlayer from './AudioPlayer'
-import ScrollableFeed from 'react-scrollable-feed'
-import { css } from '@emotion/css';
-import ScrollToBottom from 'react-scroll-to-bottom';
+//import ScrollableFeed from 'react-scrollable-feed'
+//import { css } from '@emotion/css';
+//import ScrollToBottom from 'react-scroll-to-bottom';
 
 export default function ChatMessages({
   messages,
@@ -27,15 +27,15 @@ export default function ChatMessages({
     }
   })
 
-  const ROOT_CSS = css({
-    height: page.height,
-    width: page.width
-  });
+  // const ROOT_CSS = css({
+  //   height: page.height,
+  //   width: page.width
+  // });
 
   return ( messages ?
     messages.map(message => {
       const isSender = message.uid === user.uid
-      const margin = isSender ? page.isMobile ? page.width - 400 :  page.width*0.10 : 0
+      //const margin = isSender ? page.isMobile ? page.width - 400 :  page.width*0.10 : 0
       return (
         
         <div
